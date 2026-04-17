@@ -7,5 +7,5 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 app.include_router(auth.router, prefix="/api/v1/auth", tags=["Auth"])
-app.include_router(franchise.router, prefix="/api/v1/franchise", tags=["Franchise"])
+app.include_router(franchise.router)
 app.include_router(profile.router, prefix="/api/v1/profile", tags=["Profile"])

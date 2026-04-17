@@ -51,3 +51,6 @@ def login(email: str, password: str, code: str = None, db: Session = Depends(get
 
         token = create_token({"email": user.email, "role": user.role})
         return {"access_token": token}
+
+
+
